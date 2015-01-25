@@ -21,16 +21,23 @@ def downloadfiles():
     print("Downloading files")
     speech = "http://mf2.dit.ie/gettysburg.txt"
     stopwords = "http://mf2.dit.ie/stopwords.txt"
-    h = httplib2.http(".catch")
-    speech_headers ,speechdownload = h.request(speech)
+    h = httplib2.Http(".catch")
+    speech_headers, speechdownload = h.request(speech)
     stopwords_headers, stopwordsdownload =h.request(stopwords)
+
+    speechdownload =speechdownload.decode()
+    speechdownload =speechdownload.split('\n')
+
+    stopwordsdownload =stopwordsdownload.decode()
+    stopwordsdownload =stopwordsdownload.split('\n')
 
     for word in speechdownload:
         print(word)
-if __name__ =='main':
-    #main fxn
 
-    #call download fxn and format into dict
 
-    words = downloadfiles()
+#main fxn
+
+#call download fxn and format into dict
+
+downloadfiles()
 
