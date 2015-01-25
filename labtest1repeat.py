@@ -26,13 +26,27 @@ def downloadfiles():
     stopwords_headers, stopwordsdownload =h.request(stopwords)
 
     speechdownload =speechdownload.decode()
-    speechdownload =speechdownload.split('\n')
+    speechdownload =speechdownload.split(' ')
 
     stopwordsdownload =stopwordsdownload.decode()
-    stopwordsdownload =stopwordsdownload.split('\n')
+    stopwordsdownload =stopwordsdownload.split(',')
 
+    keywords = {}
     for word in speechdownload:
-        print(word)
+        word =word.strip()
+        size = len(word)
+        if size > 3:
+            if word in keywords:
+                keywords[word] += 1
+            else:
+                keywords[word] = 1
+
+    for word2 in stopwordsdownload:
+        word2 = word2.strip()
+        if word2 in keywords:
+            keywords[word2] = 0
+#add works to dict
+    print(keywords)
 
 
 
