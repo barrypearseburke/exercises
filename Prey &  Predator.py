@@ -15,8 +15,9 @@ allowing for growing prey population
 We can adjust birth & death rates and see what happens
 * Example based on wolves & moose on island in Lake Superior.
 The island is isolated thus represents a fairly closed world
-Rules
 
+
+Rules
 1. Habitat updates itself in units of time called clock ticks. During
 tick each animal gets to do something
 2. All animals have opportunity to move into adjacent space if
@@ -39,3 +40,34 @@ some predators (the wolves)
 methods that govern how they interact with each other and the main
 program.
 """
+import string
+import random
+
+#class the island
+
+class island:
+    def __init__(self,size): # size is passed when an island is declare later on
+
+
+
+if __name__ == '__main__':
+    main()
+
+def main():
+    #variables on island and prey levels
+
+    gridsize =10
+
+    #start pray
+    num_pray =10
+    num_pred =5
+
+    pred_breed =6
+    prey_bread =3
+    pred_starve =3
+
+    runtime=300
+
+
+
+
