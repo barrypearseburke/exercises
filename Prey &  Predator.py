@@ -27,7 +27,7 @@ fixed breed time. If the animal is still alive after breed-time
 clock ticks it will reproduce. It does so by finding an unoccupied
 adjacent space. The offspring is created in this space. The animal's
 breed-time is reset to zero. Can breed at most once p/tick.
-4. Predators must eat. They have a fixed starve-time. If they cannot
+4. Predators must eat. They have fixed starve-time. If they cannot
 find prey within starve-time clock ticks, they die.
 5. Eats by moving to adjacent space containing predator.
 Starve-time reset to zero. Eating counts as a move.
