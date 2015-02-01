@@ -5,10 +5,15 @@ class clock:
         self.hour =hour
         self.minute =minute
         self.second =second
+        self.day =0
 
 
     def __str__(self):
-        return "{}:{}:{}".format(self.hour,self.minute,self.second)
+        if self.day == 0:
+
+            return "{}:{}:{}".format(self.hour,self.minute,self.second)
+        else:
+            return "{} Days , {}:{}:{}".format(self.day,self.hour,self.minute,self.second)
 
     def __repr__(self):
         return self.__str__()
@@ -23,10 +28,24 @@ class clock:
             returnvalue =int("2")
             return returnvalue
         else:
+
+            #lets try adding now
+            self.second = self.second +secondadd
+            while self.second >int("60"):
+                minuteadd += int("1")
+                self.second =self.second -int("60")
+
+            self.minute = self.minute+minuteadd
+            while self.minute >int("60"):
+                houradd += int("1")
+                self.minute =self.minute - int("60")
+            self.hour =self.hour+houradd
+            while self.hour> int("24"):
+                self.day += int("1")
+                self.hour =self.hour- int("24")
+
             returnvalue =int("0")
             return returnvalue
-
-
 
 
 def main():
@@ -43,6 +62,8 @@ def main():
 
         if counter ==1:
             counter = myclock.addtime(houradd,minuteadd,secondadd)
+            print(myclock)
+
         if counter==2:
             print("There was an error entering you one of the values. would you please enter again")
             counter = 1
