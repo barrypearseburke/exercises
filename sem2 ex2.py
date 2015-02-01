@@ -1,5 +1,5 @@
 __author__ = 'Barry'
-
+# lab2 of semister 2 making a clock
 class clock:
     def __init__(self, hour =0 ,minute =0 ,second =0):
         self.hour =hour
@@ -13,10 +13,19 @@ class clock:
     def __repr__(self):
         return self.__str__()
 
-    def addtime(self,hour , minute, second):
-        if (hour <=-1):
+    def addtime(self,houradd , minuteadd, secondadd):
+        houradd = int(houradd)
+        minuteadd =int(minuteadd)
+        secondadd =int(secondadd)
+
+        if (houradd < 0):
             print("error")
-        return
+            returnvalue =int("2")
+            return returnvalue
+        else:
+            returnvalue =int("0")
+            return returnvalue
+
 
 
 
@@ -26,11 +35,17 @@ def main():
     print(myclock)
     #myclock()
 
-    houradd =input("Please enter the current hour")
-    minuteadd = input("Please enter the current minute")
-    secondadd =input(" please enter the current second")
+    counter =1
+    while (counter !=0):
+        houradd =input("Please enter the current hour")
+        minuteadd = input("Please enter the current minute")
+        secondadd =input("please enter the current second")
 
-    myclock.addtime(houradd,minuteadd,secondadd)
+        if counter ==1:
+            counter = myclock.addtime(houradd,minuteadd,secondadd)
+        if counter==2:
+            print("There was an error entering you one of the values. would you please enter again")
+            counter = 1
 
 if __name__ == "__main__":
     main()
