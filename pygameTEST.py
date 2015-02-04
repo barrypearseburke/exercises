@@ -14,7 +14,7 @@ screen = pygame.display.set_mode(size)
 import pygame
 
 background_colour = (55,125,72)
-size =width,height =1280,720
+size =width,height =1920 1280
 
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption('Tutorial 1')
