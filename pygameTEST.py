@@ -1,29 +1,22 @@
 __author__ = 'Barry'
-"""
+
 import pygame
 pygame.init()
 
-
-pygame.display.set_caption("pygame hello world")
-
-#background.fill(255,0,0)
-screen = pygame.display.set_mode(size)
-
-"""
-
-import pygame
-
-background_colour = (55,125,72)
-size =width,height =1920 1280
+size =width,height =1280,720
 
 screen = pygame.display.set_mode(size)
-pygame.display.set_caption('Tutorial 1')
-screen.fill(background_colour)
+pygame.display.set_caption('Snake')
 
-pygame.display.flip()
-#this keeps the window open
-running = True
-while running: 
+#could use pygame.display.flip()
+pygame.display.update()
+
+gameExit =False
+while not gameExit:
     for event in pygame.event.get():
+        #print(event)
         if event.type == pygame.QUIT:
-            running = False
+            gameExit =True
+
+pygame.quit()
+quit()
