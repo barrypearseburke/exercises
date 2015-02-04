@@ -23,7 +23,7 @@ screen.fill(background_colour)
 pygame.display.flip()
 #this keeps the window open
 running = True
-while running:
+while running: 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
