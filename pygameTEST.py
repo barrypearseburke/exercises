@@ -26,3 +26,6 @@ while not gameExit:
     pygame.display.update()
 pygame.quit()
 quit()
+
+
+#commite to git test after pycharm upgrade
