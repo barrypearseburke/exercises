@@ -4,8 +4,11 @@ __author__ = 'Barry'
 
 import os
 
-shutdown = input ("At what time do you want to shutdown your pc,in minutes")
+shutdown = int( input ("At what time do you want to shutdown your pc,in minutes."))
+
+
 shutdown = (shutdown*60)
 time = ("shutdown -s -t {}".format(shutdown))
 print (time)
 os.system(time)
+
