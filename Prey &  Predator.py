@@ -54,6 +54,7 @@ if __name__ == '__main__':
     main()
 
 def main():
+
     #variables on island and prey levels
 
     gridsize =10
