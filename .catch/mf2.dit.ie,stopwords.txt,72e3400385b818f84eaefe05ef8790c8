@@ -1,0 +1,15 @@
+status: 200
+-varied-accept-encoding: gzip, deflate
+last-modified: Fri, 28 Nov 2014 11:08:45 GMT
+content-length: 157
+content-type: text/plain
+-content-encoding: gzip
+accept-ranges: bytes
+server: Apache/2.2.22 (Debian)
+content-location: http://mf2.dit.ie/stopwords.txt
+date: Wed, 04 Feb 2015 15:24:55 GMT
+etag: "b47-9d-508e948cb4c76"
+vary: Accept-Encoding
+-varied-accept-encoding: gzip, deflate
+
+a,an,the,--,i,me,he,him,she,her,it,we,us,you,they,them,who,what,this,that,these,those,mine,our,his,hers,here,have,thus,their,there,from,which,whether,might 
