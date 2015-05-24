@@ -4,7 +4,8 @@ from tkinter import  filedialog,messagebox
 from tkinter import ttk
 
 class GUI():
-    def __init__(self,my_parent):
+    def __init__(
+            self,my_parent):
         self.my_parent = my_parent
         self.my_parent.title("Feet to Meter Conversation") #This is bar at top on the line with the x to close
         self.frame = Frame(self.my_parent)
